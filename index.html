@@ -1,13 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Herencia San Ginés - Acceso</title>
+<title>Acceso – Herencia San Ginés</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+img {
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+</style>
 <script>
+const PASSWORD = "sanGINES@2026";
 function checkPassword() {
-  var pass = prompt("Acceso limitado. Introduzca la contraseña:");
-  if(pass === "sanGINES@2026") {
+  const p = prompt("Acceso limitado. Introduzca la contraseña:");
+  if (p === PASSWORD) {
     window.location.href = "content.html";
   } else {
     document.body.innerHTML = "<h2>Acceso denegado</h2>";
@@ -17,5 +28,7 @@ window.onload = checkPassword;
 </script>
 </head>
 <body>
+<img src="assets/ChatGPT.png" alt="Herencia San Ginés">
+<p><em>Uso exclusivo familiar</em></p>
 </body>
 </html>
