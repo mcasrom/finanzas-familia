@@ -1,0 +1,72 @@
+ #+TITLE: Control de Gastos-Ingresos - [Martinez@Asociados_v1]
+#+DATE: 2026-01-03 15:24
+#+AUTHOR: Administrador del Patrimonio
+#+EMAIL: mcasrom.emacs@gmail.com
+#+DESCRIPTION: 
+#+LANGUAGE: es
+#+OPTIONS: num:nil toc:t H:3 f:t TeX:t
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+#+HTML_HEAD: <style>
+#+HTML_HEAD:   body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+#+HTML_HEAD:   .org-table { margin-left: 0; margin-right: auto; width: auto; }
+#+HTML_HEAD:   .alerta-roja { color: white; background-color: #d9534f; padding: 5px; font-weight: bold; border-radius: 3px; }
+#+HTML_HEAD:   .estado-ok { color: white; background-color: #5cb85c; padding: 5px; font-weight: bold; border-radius: 3px; }
+#+HTML_HEAD: </style>
+
+#+MACRO: mes_actual {{{time(%B %Y)}}}
+
+* Instrucciones de Lectura
+Este documento se actualiza mensualmente para la transparencia de la comunidad de herederos.
+/Última actualización: {{{time(%d de %B, %Y)}}}./
+
+* Resumen del Mes: {{{mes_actual}}}
+
+** Ingresos
+#+NAME: tabla_ingresos
+|      Fecha | Concepto            | Origen/Heredero | Importe |
+|------------+---------------------+-----------------+---------|
+| 2026-01-05 | Cuota Mensual       | Heredero 1      |   30.00 |
+| 2026-01-07 | Cuota Mensual       | Heredero 2      |   30.00 |
+| 2026-01-05 | Cuota Mensual       | Heredero 3      |   30.00 |
+| 2026-01-06 | Cuota Mensual       | Heredero 4      |   30.00 |
+| 2026-01-01 | Ingreso Excepcional | Heredero 1+     |  100.00 |
+|------------+---------------------+-----------------+---------|
+|            | *TOTAL INGRESOS*      |                 |  220.00 |
+#+TBLFM: @7$4=vsum(@2..@6);%.2f
+
+** Gastos
+#+NAME: tabla_gastos
+| Categoría   | Concepto             |      Fecha | Importe |
+|-------------+----------------------+------------+---------|
+| Utilities   | Consumo Agua         | 2026-01-01 |    0.00 |
+| Utilities   | Energía Eléctrica    | 2026-01-05 |   43.94 |
+| Seguridad   | Cuota Alarma         | 2026-01-01 |    0.00 |
+| Tasas       | Cementerio (Anual)   | 2026-01-01 |    0.00 |
+| Tasas       | IBI / Ayuntamiento   | 2026-01-01 |    0.00 |
+| Excepcional | Reparación Cerradura | 2026-01-01 |    3.00 |
+|-------------+----------------------+------------+---------|
+|             | *TOTAL GASTOS*         |            |   46.94 |
+#+TBLFM: @8$4=vsum(@2..@7);%.2f
+
+** Balance Final del Mes
+#+NAME: balance_mensual
+| Concepto            |  Valor |
+|---------------------+--------|
+| Saldo Anterior      | 350.86 |
+| Total Ingresos (+)  |   220. |
+| Total Gastos (-)    |  46.94 |
+|---------------------+--------|
+| *Saldo Actual Cuenta* | 523.92 |
+| *Estado de Fondos*    |      s |
+#+TBLFM: @3$2=remote(tabla_ingresos, @7$4)::@4$2=remote(tabla_gastos, @8$4)::@5$2=@2+@3-@4;%.2f
+#+TBLFM: @6$2=if(@5$2 < 100, "⚠️ ALERTA: SALDO BAJO", "Saldo Saludable"); s
+
+* Histórico Acumulado 2026
+#+NAME: historico_2026
+| Mes     | Ingresos | Gastos | Saldo Mes | Acumulado |
+|---------+----------+--------+-----------+-----------|
+| Enero   |   220.00 |  46.94 |    173.06 |    523.92 |
+| Febrero |     0.00 |   0.00 |      0.00 |    523.92 |
+|---------+----------+--------+-----------+-----------|
+| *TOTALES* |   220.00 |  46.94 |    173.06 |           |
+#+TBLFM: @2$4=$2-$3;%.2f::@2$5=remote(balance_mensual, @2$2)+$4;%.2f::@3$4=$2-$3;%.2f::@3$5=@2$5+$4;%.2f::@4$2=vsum(@2..@3);%.2f::@4$3=vsum(@2..@3);%.2f::@4$4=vsum(@2..@3);%.2f
