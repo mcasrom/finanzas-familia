@@ -1,0 +1,11 @@
+# Temporales de Emacs y Linux
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+.DS_Store
+
+# Opcional: Si no quieres subir las fotos originales por privacidad o espacio
+# imagenes/

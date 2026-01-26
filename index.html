@@ -1,34 +1,78 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Acceso – Herencia San Ginés</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 100px;
-}
-img {
-  max-width: 300px;
-  margin-bottom: 30px;
-}
-</style>
-<script>
-const PASSWORD = "sanGINES@2026";
-function checkPassword() {
-  const p = prompt("Acceso limitado. Introduzca la contraseña:");
-  if (p === PASSWORD) {
-    window.location.href = "content.html";
-  } else {
-    document.body.innerHTML = "<h2>Acceso denegado</h2>";
-  }
-}
-window.onload = checkPassword;
-</script>
-</head>
-<body>
-<img src="assets/ChatGPT.png" alt="Herencia San Ginés">
-<p><em>Uso exclusivo familiar</em></p>
-</body>
-</html>
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portal Familia San Ginés</title>
+        <style>
+            body { font-family: 'Segoe UI', sans-serif; text-align: center; background: #f0f2f5; color: #333; padding: 20px; }
+            .container { max-width: 650px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+            img.main-img { max-width: 100%; border-radius: 10px; margin-bottom: 25px; }
+            #contenido { display: none; }
+            input[type="password"] { padding: 12px; border: 1px solid #ddd; border-radius: 5px; width: 60%; margin-bottom: 10px; }
+            button { padding: 12px 25px; background: #2c3e50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+            ul { list-style: none; padding: 0; text-align: left; }
+            li { background: #f8f9fa; margin: 8px 0; padding: 15px; border-radius: 6px; border-left: 5px solid #2c3e50; }
+            a { text-decoration: none; color: #2980b9; font-weight: bold; display: block; }
+            .legal { font-size: 0.75em; color: #999; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="protector">
+                <h2 style="color:#2c3e50;">Acceso Privado Familiar</h2>
+                <p>Por favor, introduce la contraseña familiar:</p>
+                <input type="password" id="pass" placeholder="Contraseña...">
+                <button onclick="login()">Entrar</button>
+            </div>
+
+            <div id="contenido">
+                <img src="ChatGPT.png" class="main-img" alt="Casa Familiar">
+                <p style="color:#7f8c8d;">Actualizado el 26/01/2026 18:14</p>
+                
+                <h3 style="text-align:left; border-bottom: 2px solid #eee;">Navegación</h3>
+                <ul>
+                    <li><a href="galeria.html" style="color:#d35400;">📸 ACCEDER A LA GALERÍA FOTOGRÁFICA</a></li><br>
+                    <li><a href="resumen_2026-01.html">📊 resumen_2026-01.html</a></li>
+                </ul>
+
+                <h3 style="text-align:left; border-bottom: 2px solid #eee; margin-top:30px;">Documentos</h3>
+                <ul>
+                    <li><a href="Casa_San_Gines.pdf">📄 Casa_San_Gines.pdf</a></li><li><a href="Parcela San Gines.pdf">📄 Parcela San Gines.pdf</a></li>
+                </ul>
+
+                <p onclick="logout()" style="cursor:pointer; color:#c0392b; font-size:0.85em; margin-top:30px;">Cerrar sesión</p>
+                
+                <div class="legal">
+                    Para ejercer el Derecho al Olvido sobre cualquier contenido, contacta con el autor.
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const passElem = document.getElementById('pass');
+            if (sessionStorage.getItem('fam_auth') === 'true') { showContent(); }
+
+            function login() {
+                if (passElem.value === 'sanGines@2026') {
+                    sessionStorage.setItem('fam_auth', 'true');
+                    showContent();
+                } else { alert('Contraseña incorrecta'); }
+            }
+
+            function showContent() {
+                document.getElementById('protector').style.display = 'none';
+                document.getElementById('contenido').style.display = 'block';
+            }
+
+            function logout() {
+                sessionStorage.removeItem('fam_auth');
+                location.reload();
+            }
+            
+            passElem.addEventListener("keypress", (e) => { if (e.key === "Enter") login(); });
+        </script>
+    </body>
+    </html>
+    
