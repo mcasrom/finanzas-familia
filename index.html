@@ -1,42 +1,17 @@
 
 <!DOCTYPE html><html lang='es'><head>
-<meta charset='UTF-8'>
+<meta charset='utf-8'>
 <title>Familia San Ginés</title>
 <style>
 body{font-family:Segoe UI;background:#f4f4f4;padding:20px}
 .container{max-width:720px;margin:auto;background:white;padding:35px;border-radius:12px}
-.refran{font-style:italic;color:#7f8c8d;margin:15px 0}
-#contenido{display:none}
 </style></head>
 <body><div class='container'>
-<div id='protector'>
-<h2>Acceso familiar</h2>
-<input type='password' id='p'><button onclick='login()'>Entrar</button>
-</div>
-<div id='contenido'>
-<p class='refran'>«35. *"Acequia rota, huerta muerta"*»</p>
-<p><small>Actualizado 27/01/2026 12:52</small></p>
-<h3>Navegación</h3><ul>
-<li><a href='galeria.html'>📸 Galería</a></li>
-<li><a href='resumen_2026-01.html'>📊 Resumen mensual</a></li>
-<li><a href='noticias_familia.html'>📰 Noticias familiares</a></li>
-</ul>
-<h3>Documentos</h3><ul>
-<li><a href='Parcela San Gines.pdf'>📄 Parcela San Gines.pdf</a></li><li><a href='Casa_San_Gines.pdf'>📄 Casa_San_Gines.pdf</a></li>
-</ul>
-<p onclick='logout()' style='cursor:pointer;color:#c0392b'>Cerrar sesión</p>
-</div></div>
-<script>
-function login(){
-  if (document.getElementById('p').value === '" + PASSWORD + "') {
-    sessionStorage.setItem('auth','1');
-    show();
-  } else {
-    alert('Contraseña incorrecta');
-  }
-}}
-function show(){{document.getElementById('protector').style.display='none';document.getElementById('contenido').style.display='block';}}
-function logout(){{sessionStorage.removeItem('auth');location.reload();}}
-if(sessionStorage.getItem('auth')) show();
-</script>
-</body></html>
+
+        <h2>Acceso familiar</h2>
+        <form method='post'>
+          <input type='password' name='p' placeholder='Contraseña'>
+          <p><em>Introduce la contraseña y vuelve a ejecutar el script.</em></p>
+        </form>
+        
+</div></body></html>
