@@ -2,34 +2,29 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Galería Fotográfica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Real</title>
     <style>
-        body { background:#111; color:#eee; font-family:sans-serif; text-align:center; margin:0; }
-        .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:10px; padding:20px; }
-        .grid img { width:100%; height:200px; object-fit:cover; cursor:pointer; border:2px solid #333; }
-        #lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000; }
-        #lightbox img { max-width:95%; max-height:95%; border:3px solid #fff; }
-        .btn { display:inline-block; margin:20px; padding:10px 20px; background:#444; color:#fff; text-decoration:none; border-radius:5px; }
+        body { background:#000; color:#fff; font-family:sans-serif; margin:0; text-align:center; }
+        .nav { padding: 20px; text-align: left; }
+        .btn-volver { color: #fff; text-decoration: none; background: #333; padding: 10px 20px; border-radius: 5px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; padding: 20px; }
+        .grid img { width: 100%; height: 200px; object-fit: cover; cursor: pointer; border: 1px solid #444; }
+        
+        /* LIGHTBOX: TAMAÑO REAL */
+        #lb { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:1000; cursor:zoom-out; overflow:auto; }
+        #lb img { display:block; margin: 20px auto; max-width: 95%; height: auto; box-shadow: 0 0 30px #000; }
     </style>
 </head>
 <body>
-    <a href="index.html" class="btn">← Volver al Índice</a>
-    <h1>Galería Familiar</h1>
+    <div class="nav"><a href="index.html" class="btn-volver">← VOLVER AL ÍNDICE</a></div>
+    <h1>Archivo Fotográfico</h1>
     <div class="grid">
-        <img src="imagenes/260127_imagen_047.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_046.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_045.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_044.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_043.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_042.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_041.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_040.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_039.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_038.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_037.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_036.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_035.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_034.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_033.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_032.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_031.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_030.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_029.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_028.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_027.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_026.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_025.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_024.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_023.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_022.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_021.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_020.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_019.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_018.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_017.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_016.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_015.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_014.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_013.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_012.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_011.jpeg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_010.jpeg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_009.jpeg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_008.jpeg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_007.jpeg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_006.jpeg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_005.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_004.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_003.jpg" onclick="openImg(this.src)"><img src="imagenes/260127_imagen_002.jpg" onclick="openImg(this.src)"><img src="imagenes/260126_imagen_001.jpg" onclick="openImg(this.src)"><img src="imagenes/260126_imagen_000.jpg" onclick="openImg(this.src)">
+        <img src="imagenes/260127_imagen_047.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_046.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_045.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_044.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_043.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_042.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_041.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_040.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_039.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_038.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_037.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_036.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_035.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_034.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_033.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_032.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_031.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_030.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_029.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_028.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_027.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_026.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_025.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_024.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_023.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_022.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_021.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_020.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_019.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_018.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_017.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_016.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_015.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_014.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_013.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_012.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_011.jpeg" onclick="show(this.src)"><img src="imagenes/260127_imagen_010.jpeg" onclick="show(this.src)"><img src="imagenes/260127_imagen_009.jpeg" onclick="show(this.src)"><img src="imagenes/260127_imagen_008.jpeg" onclick="show(this.src)"><img src="imagenes/260127_imagen_007.jpeg" onclick="show(this.src)"><img src="imagenes/260127_imagen_006.jpeg" onclick="show(this.src)"><img src="imagenes/260127_imagen_005.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_004.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_003.jpg" onclick="show(this.src)"><img src="imagenes/260127_imagen_002.jpg" onclick="show(this.src)"><img src="imagenes/260126_imagen_001.jpg" onclick="show(this.src)"><img src="imagenes/260126_imagen_000.jpg" onclick="show(this.src)">
     </div>
-    <div id="lightbox" onclick="this.style.display='none'">
-        <img id="full" src="">
-    </div>
+    <div id="lb" onclick="this.style.display='none'"><img id="big"></div>
     <script>
-        function openImg(src){ document.getElementById('full').src=src; document.getElementById('lightbox').style.display='flex'; }
+        function show(s){ document.getElementById("big").src=s; document.getElementById("lb").style.display="block"; }
     </script>
-    
-<footer style="margin-top:40px;font-size:0.8em;color:#888;text-align:center;">
-    <hr style="border:0;border-top:1px solid #eee;width:50%;margin:20px auto;">
-    Autor: Familia San Ginés | © 2026<br>
-    Para ejercer el Derecho al Olvido, contacta con el administrador.
-</footer>
-
 </body>
 </html>
