@@ -5,13 +5,12 @@
 #+DATE: 2026-01-27
 #+DESCRIPTION: Noticias de interés general y familiar para publicación web.
 #+KEYWORDS: noticias, familia, actualidad, avisos
-#+OPTIONS: toc:t num:nil html-postamble:nil
+#+OPTIONS: toc:nil num:nil html-postamble:nil
 
 * Introducción
 
 Este documento está redactado en *Org Mode* para Emacs con el objetivo de ser exportado posteriormente a *HTML* y publicado como *noticias.html* en una web familiar.
 
-El contenido prioriza noticias de interés general, avisos importantes y pequeños acontecimientos relevantes para el entorno familiar, manteniendo un tono claro, sobrio y accesible.
 
 * Noticias destacadas
 
@@ -37,7 +36,7 @@ Durante los próximos días se esperan cambios bruscos de temperatura. Se recomi
 :CATEGORY: Hogar
 :END:
 
-Se realizarán tareas de mantenimiento general en la vivienda durante el fin de semana. Algunas zonas podrían quedar temporalmente inaccesibles.
+NSTR
 
 * Noticias recientes
 
@@ -68,14 +67,16 @@ NSTR
 :CATEGORY: Eventos
 :END:
 
-Encuentro familiar celebrado con alta participación y ambiente positivo.
+NSTR
 
 * Notas técnicas
 
 - Documento compatible con `org-export-dispatch` (`C-c C-e`).
 - Exportable a HTML sin modificaciones adicionales.
 - Puede integrarse fácilmente en flujos automatizados con scripts *bash* o *Python*.
+- NSTR: Nothing Significant To Report  
 
 * Licencia y uso
 
-Contenido de uso privado y familiar. No destinado a difusión pública externa.
+- Contenido de uso privado y familiar. No destinado a difusión pública externa.
+- Esta "solución" web es un proyecto DIY (hazlo tú mismo) de la familia: creada con herramientas sencillas y pasión por compartir recuerdos. No pretende ser profesional ni perfecta; simplemente recoge y organiza nuestros momentos y documentos de manera práctica y accesible. Si algo te incomoda o prefieres no aparecer en algún contenido, contacta con el autor y se retirará de inmediato, respetando tu derecho al olvido.”
