@@ -14,8 +14,8 @@ body{font-family:Segoe UI;background:#f4f4f4;padding:20px}
 <input type='password' id='p'><button onclick='login()'>Entrar</button>
 </div>
 <div id='contenido'>
-<p class='refran'>«24. *"Sol de enero, ni bueno ni verdadero"*»</p>
-<p><small>Actualizado 27/01/2026 12:47</small></p>
+<p class='refran'>«35. *"Acequia rota, huerta muerta"*»</p>
+<p><small>Actualizado 27/01/2026 12:52</small></p>
 <h3>Navegación</h3><ul>
 <li><a href='galeria.html'>📸 Galería</a></li>
 <li><a href='resumen_2026-01.html'>📊 Resumen mensual</a></li>
@@ -27,7 +27,14 @@ body{font-family:Segoe UI;background:#f4f4f4;padding:20px}
 <p onclick='logout()' style='cursor:pointer;color:#c0392b'>Cerrar sesión</p>
 </div></div>
 <script>
-function login(){{if(document.getElementById('p').value==='{PASSWORD}'){{sessionStorage.setItem('auth','1');show();}}}}
+function login(){
+  if (document.getElementById('p').value === '" + PASSWORD + "') {
+    sessionStorage.setItem('auth','1');
+    show();
+  } else {
+    alert('Contraseña incorrecta');
+  }
+}}
 function show(){{document.getElementById('protector').style.display='none';document.getElementById('contenido').style.display='block';}}
 function logout(){{sessionStorage.removeItem('auth');location.reload();}}
 if(sessionStorage.getItem('auth')) show();
