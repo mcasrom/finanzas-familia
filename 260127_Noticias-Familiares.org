@@ -7,10 +7,6 @@
 #+KEYWORDS: noticias, familia, actualidad, avisos
 #+OPTIONS: toc:nil num:nil html-postamble:nil
 
-* Introducción
-
-Este documento está redactado en *Org Mode* para Emacs con el objetivo de ser exportado posteriormente a *HTML* y publicado como *noticias.html* en una web familiar.
-
 
 * Noticias destacadas
 
