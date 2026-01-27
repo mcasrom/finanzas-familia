@@ -1,0 +1,127 @@
+#+TITLE: Refranero Murciano – Listado Base
+#+AUTHOR: SME Social – Etnólogo (Murcia)
+#+LANGUAGE: es
+#+EMAIL: mcasrom.emacs@gmail.com
+#+DATE: 2026-01-27
+#+DESCRIPTION: Listado base de refranes tradicionales murcianos para extracción, análisis y reutilización etnográfica.
+#+KEYWORDS: Murcia, refranes, refranero, tradición oral, cultura popular
+#+OPTIONS: toc:t num:nil
+
+* Introducción
+
+El presente documento reúne un listado amplio de refranes murcianos tradicionales, sin interpretación asociada, con el objetivo de servir como banco de expresiones para su posterior análisis, clasificación temática, estudio lingüístico o reutilización en trabajos etnográficos y culturales.
+
+El formato está pensado para facilitar la extracción directa de ítems desde Emacs / Org Mode.
+
+* Refranero murciano (listado)
+
+1. *"Año de nieves, año de bienes"*
+
+2. *"Cuando el Segura suena, agua lleva… o se la ha llevao"*
+
+3. *"Más seco que la mojama de Cieza"*
+
+4. *"El que no riega a tiempo, riega con llanto"*
+
+5. *"A la sombra de la parra se arregla media vida"*
+
+6. *"Huerta sin agua, huertano sin alma"*
+
+7. *"Mucho sol y poco pan, mal año dan"*
+
+8. *"Casa sin patio, cuerpo sin alma"*
+
+9. *"Quien guarda, halla"*
+
+10. *"Quien va a la huerta y no madruga, ni come ni desayuna"*
+
+11. *"Agua que no has de beber, déjala correr… salvo en sequía"*
+
+12. *"En Murcia, el sol cría y el agua bendice"*
+
+13. *"Ni harto vino ni vacía la bota"*
+
+14. *"Pan, aceite y vino, camino andado"*
+
+15. *"Más vale maña que fuerza"*
+
+16. *"Cuando abril no da flores, mayo viene con dolores"*
+
+17. *"A la acequia limpia, cosecha segura"*
+
+18. *"Huertano prevenío vale por dos"*
+
+19. *"Más sabe el viejo por huertano que por viejo"*
+
+20. *"Quien desprecia la tierra, acaba sin ella"*
+
+21. *"Año de secano, año de hambre temprana"*
+
+22. *"Riada avisada no ahoga, pero arrasa"*
+
+23. *"Cuando el cielo amenaza, el huertano se agacha"*
+
+24. *"Sol de enero, ni bueno ni verdadero"*
+
+25. *"En febrero, busca la sombra el perro"*
+
+26. *"Marzo ventoso, huerto hermoso"*
+
+27. *"Abril lluvioso, mayo florido"*
+
+28. *"Agua de mayo, pan para todo el año"*
+
+29. *"A la tierra cansada, ni riego la levanta"*
+
+30. *"Huerta bien mirada vale más que regada"*
+
+31. *"Quien mal siembra, ni recoge ni aprende"*
+
+32. *"Al sol murciano, paciencia y sombrero"*
+
+33. *"Más largo que un verano en la huerta"*
+
+34. *"El calor no avisa, pero castiga"*
+
+35. *"Acequia rota, huerta muerta"*
+
+36. *"Cuando el río se enfada, no pregunta"*
+
+37. *"La tierra habla al que la escucha"*
+
+38. *"Ni campo sin agua ni casa sin gente"*
+
+39. *"Quien no cuida la huerta, la huerta lo echa"*
+
+40. *"Sol y polvo hacen al murciano recio"*
+
+41. *"De la huerta sale el pan y la paciencia"*
+
+42. *"Año de mucho aire, año de sudores"*
+
+43. *"Huerta pequeña, cuidado grande"*
+
+44. *"Quien parte el agua, reparte vida"*
+
+45. *"Sin acequia no hay vecindad"*
+
+46. *"Tierra bien pisada, cosecha asegurada"*
+
+47. *"Al amanecer se ve al buen huertano"*
+
+48. *"Cuando el calor aprieta, la sombra manda"*
+
+49. *"Más vale gota a gota que promesa rota"*
+
+50. *"El agua es poca, pero la sed es mucha"*
+
+* Referencias documentales
+
+- Gómez Ortín, F. /Refranero del Sureste Español/. Universidad de Murcia.
+- Martínez Cerezo, A. /El habla popular murciana/. Editora Regional de Murcia.
+- Archivo de Tradición Oral de la Región de Murcia.
+- Recopilaciones orales en la Huerta de Murcia, Vega Media y Campo de Cartagena.
+
+* Notas de uso
+
+Este listado puede emplearse como fuente primaria para estudios comparativos, análisis semánticos, clasificación temática o integración en proyectos digitales y educativos basados en Org Mode.

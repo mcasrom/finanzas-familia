@@ -1,0 +1,81 @@
+#+TITLE: Noticias Familiares
+#+AUTHOR: Redacción Familiar
+#+LANGUAGE: es
+#+EMAIL: mcasrom.emacs@gmail.com
+#+DATE: 2026-01-27
+#+DESCRIPTION: Noticias de interés general y familiar para publicación web.
+#+KEYWORDS: noticias, familia, actualidad, avisos
+#+OPTIONS: toc:t num:nil html-postamble:nil
+
+* Introducción
+
+Este documento está redactado en *Org Mode* para Emacs con el objetivo de ser exportado posteriormente a *HTML* y publicado como *noticias.html* en una web familiar.
+
+El contenido prioriza noticias de interés general, avisos importantes y pequeños acontecimientos relevantes para el entorno familiar, manteniendo un tono claro, sobrio y accesible.
+
+* Noticias destacadas
+
+** 🗓️ Aviso importante
+:PROPERTIES:
+:DATE: 2026-01-26
+:CATEGORY: Avisos
+:END:
+
+Se recuerda a todos los miembros de la familia revisar las fechas importantes del calendario común para evitar solapamientos y olvidos.
+
+** 🌦️ Información meteorológica relevante
+:PROPERTIES:
+:DATE: 2026-01-25
+:CATEGORY: Información
+:END:
+
+Durante los próximos días se esperan cambios bruscos de temperatura. Se recomienda precaución en desplazamientos y actividades al aire libre.
+
+** 🏠 Mantenimiento del hogar
+:PROPERTIES:
+:DATE: 2026-01-24
+:CATEGORY: Hogar
+:END:
+
+Se realizarán tareas de mantenimiento general en la vivienda durante el fin de semana. Algunas zonas podrían quedar temporalmente inaccesibles.
+
+* Noticias recientes
+
+** 📌 Actualización de servicios digitales
+:PROPERTIES:
+:DATE: 2026-01-23
+:CATEGORY: Tecnología
+:END:
+
+NSTR
+
+
+** 🚗 Desplazamientos y viajes
+:PROPERTIES:
+:DATE: 2026-01-22
+:CATEGORY: Movilidad
+:END:
+
+NSTR
+
+* Noticias archivadas
+
+** 📂 Enero 2026
+
+*** Evento familiar destacado
+:PROPERTIES:
+:DATE: 2026-01-15
+:CATEGORY: Eventos
+:END:
+
+Encuentro familiar celebrado con alta participación y ambiente positivo.
+
+* Notas técnicas
+
+- Documento compatible con `org-export-dispatch` (`C-c C-e`).
+- Exportable a HTML sin modificaciones adicionales.
+- Puede integrarse fácilmente en flujos automatizados con scripts *bash* o *Python*.
+
+* Licencia y uso
+
+Contenido de uso privado y familiar. No destinado a difusión pública externa.
