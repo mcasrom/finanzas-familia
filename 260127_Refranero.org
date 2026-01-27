@@ -1,20 +1,3 @@
-#+TITLE: Refranero Murciano – Listado Base
-#+AUTHOR: SME Social – Etnólogo (Murcia)
-#+LANGUAGE: es
-#+EMAIL: mcasrom.emacs@gmail.com
-#+DATE: 2026-01-27
-#+DESCRIPTION: Listado base de refranes tradicionales murcianos para extracción, análisis y reutilización etnográfica.
-#+KEYWORDS: Murcia, refranes, refranero, tradición oral, cultura popular
-#+OPTIONS: toc:t num:nil
-
-* Introducción
-
-El presente documento reúne un listado amplio de refranes murcianos tradicionales, sin interpretación asociada, con el objetivo de servir como banco de expresiones para su posterior análisis, clasificación temática, estudio lingüístico o reutilización en trabajos etnográficos y culturales.
-
-El formato está pensado para facilitar la extracción directa de ítems desde Emacs / Org Mode.
-
-* Refranero murciano (listado)
-
 1. *"Año de nieves, año de bienes"*
 
 2. *"Cuando el Segura suena, agua lleva… o se la ha llevao"*
